@@ -60,7 +60,7 @@ public class BusService {
             System.out.println("✅ Đặt vé thành công cho các ghế: " + successfullyBookedSeats);
         }
         if (!alreadyBookedSeats.isEmpty()) {
-            System.out.println("❌ Các ghế đã bị đặt trước: " + alreadyBookedSeats);
+            System.out.println("❌ Ghế đã được đặt: " + alreadyBookedSeats);
         }
 
         return tickets;

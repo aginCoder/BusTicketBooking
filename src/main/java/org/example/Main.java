@@ -24,11 +24,11 @@ public class Main {
 
         while (true) {
             System.out.println("\n\uD83D\uDE8D HỆ THỐNG ĐẶT VÉ XE BUS \uD83D\uDE8D");
-            System.out.println("1. Hiển thị danh sách xe");
-            System.out.println("2. Đặt vé");
-            System.out.println("3. Xem sơ đồ ghế");
-            System.out.println("4. Tìm xe theo tuyến");
-            System.out.println("5. Thoát");
+
+            System.out.println("1. Đặt vé");
+            System.out.println("2. Xem sơ đồ ghế");
+            System.out.println("3. Tìm xe theo tuyến");
+            System.out.println("4. Thoát");
             System.out.print("Chọn chức năng: ");
 
             int choice;
@@ -42,9 +42,6 @@ public class Main {
             switch (choice) {
                 case 1:
                     service.displayAllBuses();
-                    break;
-
-                case 2:
                     System.out.print("Nhập ID xe: ");
                     String busId = scanner.nextLine().trim();
                     Bus selectedBus = service.getBusById(busId);
@@ -89,7 +86,7 @@ public class Main {
                     }
                     break;
 
-                case 3:
+                case 2:
                     System.out.print("Nhập ID xe: ");
                     String busIdView = scanner.nextLine().trim();
                     Bus bus = service.getBusById(busIdView);
@@ -100,13 +97,13 @@ public class Main {
                     }
                     break;
 
-                case 4:
+                case 3:
                     System.out.print("Nhập tuyến cần tìm: ");
                     String route = scanner.nextLine().trim();
                     service.searchBusByRoute(route);
                     break;
 
-                case 5:
+                case 4:
                     System.out.println("Cảm ơn bạn đã sử dụng hệ thống!");
                     scanner.close();
                     return;
